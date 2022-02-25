@@ -1,2 +1,3 @@
-# python-pong-clone
-A simple clone of Pong using Python
+# Python Pong Clone
+A simple clone of Pong using Python.
+
