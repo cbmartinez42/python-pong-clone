@@ -19,10 +19,16 @@ screen.onkey(player_2.go_down, "Down")
 screen.onkey(player_1.go_up, "w")
 screen.onkey(player_1.go_down, "s")
 
-game_is_on = True
-while game_is_on:
+game_on = True
+while game_on:
     time.sleep(.1)
     screen.update()
     ball.move()
+    if ball.ycor() == 290 or ball.ycor() == -290 or ball.xcor() == player_1.xcor() or ball.xcor() == player_2.xcor():
+        ball.bounce()
+    elif ball.xcor() == 290:
+        print('player 1 scores')
+    elif ball.xcor() == -290:
+        print('player 2 scores')
 
 screen.exitonclick()
